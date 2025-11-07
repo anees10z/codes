@@ -33,16 +33,14 @@ void mergesort(int arr[], int low, int high)
 int main()
 {
     int arr[7], l = 0, h, i;
-    printf("Enter 7 elements:
-");
+    printf("Enter 7 elements:");
     for (i = 0; i < 7; ++i)
         scanf("%d", &arr[i]);
-    h = 7 - 1;
+    h = (sizeof(arr) / sizeof(arr[0])) - 1;
     mergesort(arr, l, h);
-    printf("
-Sorted array:
-");
+    printf("Sorted array: ");
     for (i = 0; i < 7; ++i)
         printf("%d ", arr[i]);
+    
     return 0;
 }
