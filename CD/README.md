@@ -11,7 +11,7 @@ This repository contains the programs implemented for the **Compiler Design Lab*
 3. Lex Program to display count of vowels & consonants in a given string.
 4. Lex Program to check string is keyword or identifier.
 5. Lex Program to recognize relational expression.
-6. 
+6. Lex Program to recognize arithematic expression.
 7. 
 8. 
 9. 
@@ -25,6 +25,9 @@ This repository contains the programs implemented for the **Compiler Design Lab*
 
 ---
 
-## ⚙️ How to Run
+## ▶ How to Run Lex Programs
+(i) flex lexFileName.l
+(ii) gcc lex.yy.cc
+(iii) ./a.exe
 
-### ▶ For C Programs
+### ▶ How to Run C Programs
