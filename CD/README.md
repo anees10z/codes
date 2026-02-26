@@ -26,8 +26,8 @@ This repository contains the programs implemented for the **Compiler Design Lab*
 ---
 
 ## ▶ How to Run Lex Programs
-(i) flex lexFileName.l
-(ii) gcc lex.yy.cc
-(iii) ./a.exe
+(i)     flex lexFileName.l <br>
+(ii)    gcc lex.yy.cc <br>
+(iii)   ./a.exe <br>
 
 ### ▶ How to Run C Programs
