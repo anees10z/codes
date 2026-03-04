@@ -8,7 +8,7 @@
 
 %%
 
-// imput wrap
+// input wrap
 int yywrap(){
     return 1;
 }
@@ -16,4 +16,5 @@ int yywrap(){
 // main program
 void main(){
 	yylex();
+
 }
