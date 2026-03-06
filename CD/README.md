@@ -18,10 +18,10 @@ This repository contains the programs implemented for the **Compiler Design Lab*
 10. Lex Program to print reverse of a number.
 11. Lex Program to display entered input is uppercase or lowercase or number or special character.
 12. Lex Program to count number of lines and characters from the .txt file.
-13. 
-14. 
-15. 
-16. 
+13. C program to chheck string is keyword or identifier.
+14. C program to count number of lines, characters, spaces and tabs.
+15. C program to check string is accepted by grammar.
+16. C program for recursive descent parser.
 
 ---
 
@@ -31,3 +31,5 @@ This repository contains the programs implemented for the **Compiler Design Lab*
 (iii)   ./a.exe <br>
 
 ## ▶ How to Run C Programs
+(i)    gcc fileName.c <br>
+(ii)   ./a.exe <br>
