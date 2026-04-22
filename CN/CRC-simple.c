@@ -1,46 +1,44 @@
-#include <stdio.h>
-#include <string.h>
+#include<stdio.h>
+#include<string.h>
+
 
 int main() {
-    char data[50], div[20], temp[50];
-    int i, j, n, dlen;
+	char data[50];
+	char temp[50];
+	char divisor[20];
+	int datalen, divlen;
+	int i, j;
 
-    printf("Data: ");
-    scanf("%s", data);
 
-    printf("Divisor: ");
-    scanf("%s", div);
+	printf("Enter data: ");
+	scanf("%s", data);
 
-    dlen = strlen(data);
-    n = strlen(div);
+	printf("Enter divisor: ");
+	scanf("%s", divisor);
 
-    // append zeros
-    for(i = 0; i < n-1; i++)
-        data[dlen+i] = '0';
-    data[dlen+n-1] = '\0';
+	datalen = strlen(data);
+	divlen = strlen(divisor);
 
-    strcpy(temp, data);
+	for(i = 0; i<divlen-1; ++i) {
+		data[datalen+i] = '0';
+	}
+	data[datalen+divlen-1] = '\0';
 
-    // division
-    for(i = 0; i <= strlen(data)-n; i++) {
-        if(temp[i] == '1') {
-            for(j = 0; j < n; j++)
-                temp[i+j] = (temp[i+j] == div[j]) ? '0' : '1';
-        }
-    }
+	strcpy(temp, data);
+	
+    // XOR Division
+	for(i = 0; i<=strlen(data) - divlen; ++i) {
+		if(temp[i] == '1') {
+			for(j= 0; j<divlen; ++j) {
+				if(temp[i+j] == divisor[j])
+					temp[i+j] = '0';
+				else
+					temp[i+j] = '1';
+			}
+		}
+	}
+	printf("CRC bits: ");
+	printf("%s", temp);
 
-    // print CRC
-    printf("CRC bits: ");
-    for(i = dlen; i < dlen+n-1; i++)
-        printf("%c", temp[i]);
-    // receiver side same logic send actual data + crc bits and same divisor
-    // for(i = dlen; i < dlen+n-1; i++){
-    //     if(temp[i] != '0'){
-    //         printf("Error");
-    //         return 0;
-    //     }
-    // }
-    // printf("No error");
-
-    return 0;
+	return 0;
 }
